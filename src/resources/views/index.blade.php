@@ -7,7 +7,8 @@
 @section('content')
 <div class="success-message">Todoを作成しました</div>
 <div class="wrapper">
-    <form action="" class="">
+    <form action="/todos" method="post">
+        @csrf
         <div class="form-item">
             <div class="input-form">
                 <input type="text" class="input" name="content">
@@ -21,11 +22,13 @@
                 <th>Todo</th>
                 <td></td>
             </tr>
+             @foreach($todos as $todo)
             <tr>
                 <td>
                     <form action="" class="edit-form">
+                       
                         <div class="text">
-                            <input type="text" class="input-text" name="content" value="test">
+                            <input type="text" class="input-text" name="content" value="{{ $todo['content']}}">
                         </div>
                         <div class="button">
                             <button type="submit" class="edit-btn">更新</button>
@@ -41,8 +44,8 @@
                         </div>
                     </form>
                 </td>
-                    
             </tr>
+            @endforeach
         </table>
 </div>
 @endsection

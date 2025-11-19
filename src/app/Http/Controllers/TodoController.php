@@ -16,6 +16,6 @@ class TodoController extends Controller
     {
         $todo = $request->only(['content']);
         Todo::create($todo);
-        return redirect('/');
+        return redirect('/')->with('message', 'Todoを作成しました');
         }
 }

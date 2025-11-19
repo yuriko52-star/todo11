@@ -5,7 +5,11 @@
 @endsection
 
 @section('content')
-<div class="success-message">Todoを作成しました</div>
+@if(session('message'))
+<div class="success-message">
+    {{ session('message') }}
+</div>
+@endif
 <div class="wrapper">
     <form action="/todos" method="post">
         @csrf

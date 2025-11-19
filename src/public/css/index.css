@@ -4,6 +4,15 @@
     padding: 10px 20px;
     margin-bottom: 60px;
 }
+.error-message {
+    background-color: pink;
+    color: red;
+    padding: 10px 20px;
+    margin-bottom: 60px;
+}
+li {
+    list-style: none;
+}
 .wrapper {
     max-width: 1000px;
     margin: 0 auto;

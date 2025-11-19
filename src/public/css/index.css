@@ -53,15 +53,19 @@ td:first-of-type {
 .edit-form {
     display: flex;
     justify-content:space-between ;
-    align-items: center;
+    /* align-items: center; */
+   
 }
 .text {
     width: 80%;
-    line-height: 50%;
+     line-height: 50%; 
+    
+    
 }
 .input-text {
     width: 100%;
-    /* padding: 20px 10px; */
+    /* align-items: center; */
+   
 
 }
 .button {

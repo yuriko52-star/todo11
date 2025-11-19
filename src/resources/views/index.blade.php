@@ -10,6 +10,15 @@
     {{ session('message') }}
 </div>
 @endif
+@if($errors->any())
+<div class="error-message">
+    <ul>
+        @foreach($errors->all() as $error)
+        <li>{{ $error}}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
 <div class="wrapper">
     <form action="/todos" method="post">
         @csrf

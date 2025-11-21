@@ -12,8 +12,9 @@
 <body>
     <header id="header">
         <h1 class="site-title">
-            <a href="#">todo</a>
+            <a href="/">todo</a>
         </h1>
+        <a href="/categories" class="link">カテゴリ一覧</a>
         
     </header>
     

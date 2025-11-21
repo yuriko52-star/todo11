@@ -20,20 +20,39 @@
 </div>
 @endif
 <div class="wrapper">
-    <form action="/todos" method="post">
-        @csrf
+    <h2 class="form-title">新規作成</h2
+            2>
+            <form action="/todos" method="post">
+                @csrf
+        <div class="form-item">
+            
+            
+            <div class="input-form">
+                <input type="text" class="input" name="content">
+            </div>
+            <select name="" id="" class="select">
+                <option value="" class="">カテゴリ</option>
+            </select>
+            <button class="btn" type="submit">作成</button>
+            </div>
+    </form>
+    <h2 class="form-title">Todo検索</h2>
+    <form action="" class="search-form">
         <div class="form-item">
             <div class="input-form">
                 <input type="text" class="input" name="content">
             </div>
-                
-            <button class="btn" type="submit">作成</button>
-            </div>
+            <select name="" id="" class="select">
+                <option value="" class="">カテゴリ</option>
+            </select>
+            <button class="btn" type="submit">検索</button>
+            
+        </div>
     </form>
         <table>
             <tr>
                 <th>Todo</th>
-                <td></td>
+                <th>カテゴリ</th>
             </tr>
              @foreach($todos as $todo)
             <tr>
@@ -44,6 +63,9 @@
                         <div class="text">
                             <input type="text" class="input-text" name="content" value="{{ $todo['content']}}">
                             <input type="hidden"name="id" value="{{ $todo['id'] }}">
+                            <div class="text">
+                                <p>Category 1</p>
+                            </div>
                         </div>
                         <div class="button">
                             <button type="submit" class="edit-btn">更新</button>

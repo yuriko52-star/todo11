@@ -38,4 +38,17 @@ Todoのidは、inputタグのhidden属性を指定して、コントローラに
 削除したい Todo をフォームから送信されたidで検索し、deleteメソッドで Todoを削除  
 モデルクラス::find(主キー)->delete();  
 id を元にデータを削除する  
+## Todoアプリ中級で使用するテーブルの作成とリレーションの設定(１対 N)   
+マイグレーションファイル編集  
+外部キーの設定  
+foreignId('category_id')外部IDcategory_idを設定  
+constrained() laravelの規約に則り、自動でテーブルを紐づけてくれる  
+cascadeOnDelete() 参照先のidが削除された時に、その外部idを持つレコードも削除される  
+マイグレーションファイル名の変更  
+マイグレーションの実行 php artisan migrate:fresh  
+モデルの作成  
+ todosテーブルに紐づくcategoryを取り出すために、モデルでbelongsTo結合を使用  
+belongsToは、外部キーで関連付けられているテーブルのレコードを取り出すメソッド  
+
+
 

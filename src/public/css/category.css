@@ -4,42 +4,40 @@
     padding: 10px 20px;
     margin-bottom: 60px;
 }
+
 .error-message {
     background-color: pink;
     color: red;
     padding: 10px 20px;
     margin-bottom: 60px;
 }
+
 li {
     list-style: none;
 }
+
 .wrapper {
     max-width: 1000px;
-    margin: 60px auto;
+    margin: 0 auto;
 }
-.form-title {
-    padding: 0 60px ;
-}
+
 .form-item {
     display: flex;
     justify-content: space-between;
     margin: 60px;
 }
+
 .input-form {
-    width: 50%;
+    width: 70%;
 }
+
 .input {
     width: 100%;
     outline: none;
     border: 1px solid #ccc;
     padding: 10px 20px;
 }
-.select {
-    border: 1px solid #ccc;
-    width: 20%;
-    margin-right: 20px;
-    text-align: center;
-}
+
 .btn {
     width: 20%;
     background-color: #000;
@@ -47,8 +45,9 @@ li {
     cursor: pointer;
     padding: 10px 30px;
 }
+
 table {
-    border:0;
+    border: 0;
     /* max-width :1000px; */
     width: 100%;
     text-align: left;
@@ -57,51 +56,58 @@ table {
 
 th,
 td {
-     border-bottom: 1px solid #ccc ; 
+    border-bottom: 1px solid #ccc;
 }
+
 th {
     font-weight: bold;
     padding: 10px;
     /* width: 100%; */
-} 
+}
+
 td:first-of-type {
     width: 90%;
     padding: 10px;
 }
+
 .edit-form {
     display: flex;
-    justify-content:space-between ;
+    justify-content: space-between;
     /* align-items: center; */
-   
+
 }
+
 .text {
     width: 80%;
-     line-height: 50%; 
-    
-    
+    line-height: 50%;
+
+
 }
+
 .input-text {
     width: 100%;
     /* align-items: center; */
-   
+
 
 }
+
 .button {
     width: 50px;
 }
+
 .edit-btn {
-     width: 100%; 
+    width: 100%;
     background-color: blue;
     color: #fff;
-    padding:  5px; 
-   align-items: center;
-   
+    padding: 5px;
+    align-items: center;
+
 }
 
 .delete-btn {
     width: 100%;
     background-color: red;
     color: #fff;
-    padding: 5px ;
+    padding: 5px;
     align-items: center;
 }

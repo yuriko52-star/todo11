@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/index.css') }}">
+<link rel="stylesheet" href="{{ asset('css/category.css') }}">
 @endsection
 
 @section('content')
@@ -35,7 +35,7 @@
                 <th>Category</th>
                 <td></td>
             </tr>
-             @foreach()
+             
             <tr>
                 <td>
                     <form action="" class="edit-form" method="post">
@@ -63,7 +63,7 @@
                     </form>
                 </td>
             </tr>
-            @endforeach
+           
         </table>
 </div>
 @endsection

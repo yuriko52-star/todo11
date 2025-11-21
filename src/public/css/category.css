@@ -49,15 +49,16 @@ li {
 table {
     border: 0;
     /* max-width :1000px; */
-    width: 100%;
+    width: 80%;
     text-align: left;
     margin: 30px auto;
 }
 
 th,
 td {
-    border-bottom: 1px solid #ccc;
+     border-bottom: 1px solid #ccc; 
 }
+
 
 th {
     font-weight: bold;
@@ -69,7 +70,9 @@ td:first-of-type {
     width: 86%;
     padding: 10px;
 }
-
+td:last-of-type {
+    width: 40%;
+}
 .edit-form {
     display: flex;
     justify-content: space-between;
@@ -103,7 +106,9 @@ td:first-of-type {
     align-items: center;
 
 }
-
+.delete-form {
+    width: 40%;
+}
 .delete-btn {
     width: 100%;
     background-color: red;

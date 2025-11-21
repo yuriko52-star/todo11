@@ -20,11 +20,11 @@
 </div>
 @endif
 <div class="wrapper">
-    <form action="/" method="post">
+    <form action="/categories" method="post">
         @csrf
         <div class="form-item">
             <div class="input-form">
-                <input type="text" class="input" name="name">
+                <input type="text" class="input" name="name" value="{{ old('name') }}">
             </div>
                 
             <button class="btn" type="submit">作成</button>
@@ -33,17 +33,17 @@
         <table>
             <tr>
                 <th>Category</th>
-                <td></td>
+                <th></th>
             </tr>
-             
+             @foreach($categories as $category)
             <tr>
                 <td>
-                    <form action="" class="edit-form" method="post">
+                    <form action="/categories/update" class="edit-form" method="post">
                        @method('PATCH')
                        @csrf
                         <div class="text">
-                            <input type="text" class="input-text" name="name" value="">
-                            <input type="hidden"name="id" value="">
+                            <input type="text" class="input-text" name="name" value="{{ $category['name'] }}">
+                            <input type="hidden"name="id" value="{{ $category['id'] }}">
                         </div>
                         <div class="button">
                             <button type="submit" class="edit-btn">更新</button>
@@ -53,17 +53,17 @@
                 </td>
 
                 <td>
-                    <form action="" class="delete-form" method="post">
+                    <form action="/categories/delete" class="delete-form" method="post">
                         @method('DELETE')
                         @csrf
                         <div class="button">
-                            <input type="hidden" name="id" value="">
+                            <input type="hidden" name="id" value="{{ $category['id'] }}">
                             <button class="delete-btn" type="submit">削除</button>
                         </div>
                     </form>
                 </td>
             </tr>
-           
+           @endforeach
         </table>
 </div>
 @endsection

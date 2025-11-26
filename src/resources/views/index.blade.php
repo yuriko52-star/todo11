@@ -30,32 +30,45 @@
             <div class="input-form">
                 <input type="text" class="input" name="content">
             </div>
-            <select name="" id="" class="select">
+            <select name="category_id" class="select">
                 <option value="" class="">カテゴリ</option>
+                @foreach($categories as $category)
+                <option value="{{ $category['id'] }}">{{ $category['name'] }}</option>
+                @endforeach
             </select>
             <button class="btn" type="submit">作成</button>
             </div>
     </form>
     <h2 class="form-title">Todo検索</h2>
-    <form action="" class="search-form">
+    <form action="/todos/search" method="get" class="search-form">
+        @csrf
         <div class="form-item">
             <div class="input-form">
-                <input type="text" class="input" name="content">
+                <input type="text" class="input" name="keyword" value="{{ old('keyword') }}">
             </div>
-            <select name="" id="" class="select">
-                <option value="" class="">カテゴリ</option>
+            <select name="category_id" class="select">
+                <option value="" id="">カテゴリ</option>
+                @foreach($categories as $category)
+                    <option value="{{ $category['id'] }}">{{ $category['name'] }}</option>
+                @endforeach
             </select>
             <button class="btn" type="submit">検索</button>
             
         </div>
     </form>
+    <div class="todo-table">
         <table>
-            <tr>
-                <th>Todo</th>
-                <th>カテゴリ</th>
+            <tr class="tr">
+                <th>
+                    <span>Todo</span>
+                    <span>カテゴリ</span>
+                    
+                </th>
+                <th></th>
             </tr>
-             @foreach($todos as $todo)
+            @foreach($todos as $todo)
             <tr>
+                <tbody>
                 <td>
                     <form action="/todos/update" class="edit-form" method="post">
                        @method('PATCH')
@@ -63,13 +76,11 @@
                         <div class="text">
                             <input type="text" class="input-text" name="content" value="{{ $todo['content']}}">
                             <input type="hidden"name="id" value="{{ $todo['id'] }}">
-                            <div class="text">
-                                <p>Category 1</p>
                             </div>
-                        </div>
-                        <div class="button">
-                            <button type="submit" class="edit-btn">更新</button>
-                        </div>
+                            <p>{{ $todo->category->name}}</p>
+                           <div class="button">
+                                <button type="submit" class="edit-btn">更新</button>
+                            </div>
                         
                     </form>
                 </td>
@@ -84,8 +95,10 @@
                         </div>
                     </form>
                 </td>
+                </tbody>
             </tr>
             @endforeach
         </table>
+    </div>
 </div>
 @endsection

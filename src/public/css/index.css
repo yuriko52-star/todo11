@@ -47,61 +47,63 @@ li {
     cursor: pointer;
     padding: 10px 30px;
 }
+.todo-table {
+    width: 80%;
+    margin: 20px auto;
+}
 table {
-    border:0;
-    /* max-width :1000px; */
     width: 100%;
     text-align: left;
-    margin: 30px auto;
 }
 
-th,
-td {
-     border-bottom: 1px solid #ccc ; 
-}
+
 th {
-    font-weight: bold;
-    padding: 10px;
-    /* width: 100%; */
-} 
+    width: 20%;
+    padding: 15px;
+    border-bottom: 1px solid#ccc;
+    
+    
+
+}
+span {
+    margin-right: 40%;
+}
+td {width: 100%;
+    padding: 15px;
+    border-bottom: 1px solid#ccc;
+}
 td:first-of-type {
     width: 90%;
-    padding: 10px;
+    padding: 15px;
 }
+p {
+    margin-right:20%;
+}
+    
+    
 .edit-form {
     display: flex;
-    justify-content:space-between ;
-    /* align-items: center; */
-   
-}
-.text {
-    width: 80%;
-     line-height: 50%; 
-    
-    
-}
-.input-text {
-    width: 100%;
-    /* align-items: center; */
-   
+    justify-content: space-between;
+    /* width: 80%; */
 
 }
 .button {
     width: 50px;
 }
+
 .edit-btn {
-     width: 100%; 
+    width: 100%;
     background-color: blue;
     color: #fff;
-    padding:  5px; 
-   align-items: center;
-   
+    padding: 5px;
+    align-items: center;
+
 }
 
 .delete-btn {
     width: 100%;
     background-color: red;
     color: #fff;
-    padding: 5px ;
+    padding: 5px;
     align-items: center;
 }
